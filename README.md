@@ -1,2 +1,2 @@
-# HTML
-Curso de HTML
+# HTML & HTML5
+Curso de HTML e HTML5
