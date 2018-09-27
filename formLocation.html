@@ -1,0 +1,21 @@
+<script type="text/javascript">
+	function getLocation(){
+		if (navigator.getLocation){
+			navigator.getLocation.getCurrentPosition(getPosition);
+		}else{
+				alert("GeoLocalizacao nao suportada!");
+		}
+	}
+	function getPosition(posicao) {
+		document.getElementById("lat").value= posicao.coords.Latitude;
+		document.getElementById("log").value= posicao.coords.Longitude;
+	}
+
+</script>
+
+<form>
+	Latitude: <input type="text" id="lat"/><br>
+	Longitude: <input type="text" id="log"/><br>
+
+	<input type="button" value="Exibir" onclick="salvar();"/>
+</form>
