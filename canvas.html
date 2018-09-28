@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var x_obj1 = 0;
+		var y_obj2 = 51;
+		function load (){
+			var cenario = document.getElementById("cenario");
+			var ctx = cenario.getContext("2d");
+	
+			ctx.fillStyle='#FFFFFF';
+			ctx.fillRect(0, 0, 800, 600);			
+
+			ctx.fillStyle='#271918';
+			ctx.fillRect(x_obj1, 0, 50, 50);
+
+			ctx.fillStyle='#F1140D';
+			ctx.fillRect(0, y_obj2, 50, 50);
+
+			x_obj1 = x_obj1 + 5;
+			y_obj2 = y_obj2 + 5;
+		}
+			setInterval('load();', 100);
+
+	</script>
+</head>
+<body onload="load();">
+	<canvas id="cenario" width="800" height="600">
+		
+	</canvas>
+</body>
+</html>

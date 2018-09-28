@@ -1,0 +1,17 @@
+<script type="text/javascript">
+	function getNotification(){
+		if (window.webkitNotifications.checkPermission() == 0){
+				showNotification();
+		}else {
+			window.webkitNotifications.requestPermission();
+		}
+	}
+	function showNotification(){
+		var n = window.webkitNotifications.createNotification("emailLogo.png", "Novo Email", "Chegou Email!");
+		n.show();
+	}	
+</script>
+<body>
+	<input type="button" onclick="getNotification();" value="Exibir">
+
+</body>
